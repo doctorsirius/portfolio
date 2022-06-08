@@ -66,14 +66,26 @@ a {
   }
 }
 body {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  color: var(--fg-level-00);
+  background-color: rgb(249, 249, 249);
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  overflow: hidden;
   font-size: 1.8rem;
+  padding: 64px;
 }
 
 .sidebar {
+  background-color: white;
   display: flex;
   flex-direction: column;
   width: 320px;
   padding: 32px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-head {
@@ -86,10 +98,7 @@ body {
 }
 .sidebar-head .photo {
   width: 100%;
-  border: 2px solid black;
-  border-radius: 2px;
-  position: -webkit-sticky;
-  position: sticky;
+  border-radius: 8px;
 }
 .sidebar-head .photo-caption {
   margin-top: 8px;
@@ -104,8 +113,9 @@ body {
   overflow-y: auto;
 }
 .sidebar-body .section .title {
+  font-weight: 600;
   font-size: 24px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .sidebar-body .section .content .group .label {
   font-size: 18px;
@@ -169,16 +179,6 @@ body {
 .notes {
   font-size: 14px;
   line-height: 1.2;
-}
-
-body {
-  display: flex;
-  font-family: "Quicksand", sans-serif;
-  color: var(--fg-level-00);
-  background-color: var(--bg-level-10);
-  transition-property: background-color, color;
-  transition-duration: 0.2s;
-  overflow: hidden;
 }
 
 .button {
@@ -277,7 +277,8 @@ body {
   font-size: 20px;
   max-width: 64ch;
 }
-.paragraph .gallery, .paragraph .timeline {
+.paragraph .gallery,
+.paragraph .timeline {
   margin-top: 24px;
 }
 
@@ -306,8 +307,6 @@ strong {
 }
 .gallery .thumbnail .photo {
   height: 20rem;
-  border: 2px solid black;
-  border-radius: 4px;
 }
 .gallery .thumbnail .year {
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);

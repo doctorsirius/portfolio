@@ -33,13 +33,16 @@ body {
   &::-webkit-scrollbar {
     width: 17px;
   }
+
   &::-webkit-scrollbar-track {
     background-color: var(--bg-level-10);
   }
+
   &::-webkit-scrollbar-thumb {
     border: 6px solid var(--bg-level-10);
     border-radius: 0.85rem;
     background-color: var(--bg-level-03);
+
     &:hover {
       background-color: var(--bg-level-00);
     }
@@ -77,15 +80,28 @@ a {
 
 // Rest of styles
 
+
 body {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  color: var(--fg-level-00);
+  background-color: rgb(249, 249, 249);
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  overflow: hidden;
   font-size: 1.8rem;
+  padding: 64px;
 }
 
 .sidebar {
+  background-color: white;
   display: flex;
   flex-direction: column;
   width: 320px;
   padding: 32px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.20);
 }
 
 .sidebar-head {
@@ -95,15 +111,17 @@ body {
   padding-bottom: 32px;
   overflow: hidden;
   flex-shrink: 0;
+
   .photo {
     width: 100%;
-    border: 2px solid black;
-    border-radius: 2px;
-    position: sticky;
+    // border: 2px solid black;
+    border-radius: 8px;
   }
+
   .photo-caption {
     margin-top: 8px;
     text-align: center;
+
     .name {
       font-size: 24px;
       font-weight: 600;
@@ -113,24 +131,31 @@ body {
 
 .sidebar-body {
   overflow-y: auto;
+
+
   .section {
     .title {
+      font-weight: 600;
       font-size: 24px;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
+
     .content {
-      .group{
+      .group {
         .label {
           font-size: 18px;
           margin-bottom: 3px;
           font-weight: 600;
         }
+
         .detail {
           font-size: 14px;
+
           .play-button {
             margin-left: 4px;
           }
         }
+
         &:not(:last-child) {
           margin-bottom: 8px;
         }
@@ -163,24 +188,31 @@ body {
   overflow: hidden;
   background-color: white;
   margin-bottom: 2px;
+
   .step {
     flex-basis: 25%;
+
     &:not(:last-child) {
       border-right: 1px solid black;
     }
   }
+
   &.rated-1 .step:nth-child(1) {
     background-color: lightgreen;
   }
+
   &.rated-2 .step:nth-child(-n+2) {
     background-color: lightgreen;
   }
+
   &.rated-3 .step:nth-child(-n+3) {
     background-color: lightgreen;
   }
+
   &.rated-4 .step:nth-child(-n+4) {
     background-color: lightgreen;
   }
+
   &.rated-5 .step:nth-child(-n+5) {
     background-color: lightgreen;
   }
@@ -191,15 +223,7 @@ body {
   line-height: 1.2;
 }
 
-body {
-  display: flex;
-  font-family: 'Quicksand', sans-serif;
-  color: var(--fg-level-00);
-  background-color: var(--bg-level-10);
-  transition-property: background-color, color;
-  transition-duration: 0.2s;
-  overflow: hidden;
-}
+
 
 .button {
   display: inline-flex;
@@ -212,7 +236,9 @@ body {
   transition-property: background-color, color, transform;
   transition-duration: 0.2s;
   will-change: transform;
-  &:hover, &:focus-visible {
+
+  &:hover,
+  &:focus-visible {
     transform: scale(1.025);
     background-color: var(--bg-level-01);
   }
@@ -230,9 +256,11 @@ body {
   .lang {
     transition: border-color 0.2s;
     border-bottom: 2px solid transparent;
+
     &:not(:last-child) {
       margin-right: 8px;
     }
+
     &.active {
       font-weight: 600;
       border-color: black;
@@ -255,6 +283,7 @@ body {
 .content-wrapper {
   overflow: hidden;
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -267,34 +296,41 @@ body {
 
 
 .body {
-.content {
-  height: 100%;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  padding: 6.4rem 3.2rem 3.2rem 3.2rem;;
-  &::-webkit-scrollbar {
-    width: 17px;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: var(--bg-level-10);
-  }
-  &::-webkit-scrollbar-thumb {
-    border: 6px solid var(--bg-level-10);
-    border-radius: 0.85rem;
-    background-color: var(--bg-level-03);
-    &:hover {
-      background-color: var(--bg-level-00);
+  .content {
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding: 6.4rem 3.2rem 3.2rem 3.2rem;
+    ;
+
+    &::-webkit-scrollbar {
+      width: 17px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--bg-level-10);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 6px solid var(--bg-level-10);
+      border-radius: 0.85rem;
+      background-color: var(--bg-level-03);
+
+      &:hover {
+        background-color: var(--bg-level-00);
+      }
+    }
+
+    .title {
+      font-size: 48px;
+      margin-bottom: 32px;
     }
   }
-  .title {
-    font-size: 48px;
-    margin-bottom: 32px;
-  }
-}
 }
 
 .navigation {
   flex: 1;
+
   .button:not(:last-child) {
     margin-right: 1.6rem;
   }
@@ -309,7 +345,9 @@ body {
 .paragraph {
   font-size: 20px;
   max-width: 64ch;
-  .gallery, .timeline {
+
+  .gallery,
+  .timeline {
     margin-top: 24px;
   }
 }
@@ -323,25 +361,28 @@ strong {
   gap: 1rem;
   grid-auto-rows: 20rem;
   grid-template-columns: repeat(auto-fill, 20rem);
+
   .thumbnail {
     will-change: transform;
     transition: transform 0.2s;
     position: relative;
+
     &:hover {
       cursor: pointer;
       transform: scale(1.025);
+
       .year {
         opacity: 1;
         transform: rotate(-5.625deg);
       }
     }
+
     .photo {
       height: 20rem;
-      border: 2px solid black;
-      border-radius: 4px;
     }
+
     .year {
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.25);
+      box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
       opacity: 0;
       padding: 4px 8px;
       border-radius: 2px;
@@ -366,9 +407,11 @@ strong {
   min-height: 18px;
   border-radius: 4px;
   transition: background-color, 0.2s;
+
   &:hover {
     background-color: red;
   }
+
   svg {
     fill: white;
   }
@@ -382,6 +425,7 @@ strong {
 
 .milestone {
   display: flex;
+
   // justify-content: flex-end;
   .date {
     display: flex;
@@ -394,12 +438,14 @@ strong {
     // overflow: hidden;
     // white-space: nowrap;
   }
+
   .marker {
     display: flex;
     flex-basis: 16px;
     justify-content: center;
     position: relative;
     padding-top: 5px;
+
     &::before {
       content: "";
       width: 16px;
@@ -409,27 +455,32 @@ strong {
       background-color: white;
     }
   }
+
   &:not(:last-child) {
     .marker::after {
-        content: "";
-        width: 4px;
-        height: 100%;
-        background-color: hsl(220, 0%, 75%);
-        position: absolute;
-        z-index: -1;
-      }
+      content: "";
+      width: 4px;
+      height: 100%;
+      background-color: hsl(220, 0%, 75%);
+      position: absolute;
+      z-index: -1;
     }
+  }
+
   .details {
     display: flex;
     flex-direction: column;
     flex: 1;
     margin-left: 16px;
+
     .job-title {
       font-weight: 600;
     }
+
     .company {
       font-size: 16px;
     }
+
     .job-description {
       margin-top: 8px;
       margin-bottom: 16px;
