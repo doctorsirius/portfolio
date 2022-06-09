@@ -35,3 +35,71 @@ for (var i = 0; i < lang.length; i++) {
     this.className += " active";
   });
 }
+
+
+// Charts
+
+const ctx = document.getElementById('uxSkills');
+const uxSkills = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: [
+      'Research',
+      'Testing',
+      'Visual',
+      'Interaction',
+      'Architecture',
+      'Writting',
+      'Prototyping'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [3, 3, 5, 5, 4, 4, 5],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    }]
+  },
+  options: {
+    elements: {
+      line: {
+        borderWidth: 2,
+      },
+      point: {
+        radius: 4,
+        borderWidth: 2,
+      }
+    },
+    scales: {
+      r: {
+        ticks: {
+          font: {
+            size: 16
+          }
+        },
+        angleLines: {
+          lineWidth: 2
+        },
+        grid: {
+          lineWidth: 2
+        },
+        suggestedMin: 1,
+        suggestedMax: 5,
+        pointLabels: {
+          font: {
+            size: 16
+          }
+        }
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      }
+    }
+  }
+});
