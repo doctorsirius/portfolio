@@ -46,15 +46,14 @@ const uxSkills = new Chart(ctx, {
     labels: [
       'Research',
       'Testing',
-      'Visual',
-      'Interaction',
-      'Architecture',
-      'Writting',
-      'Prototyping'
+      'UI',
+      'IxD',
+      'IA',
+      'Writting'
     ],
     datasets: [{
       label: 'My First Dataset',
-      data: [3, 3, 5, 5, 4, 4, 5],
+      data: [3, 3, 5, 5, 4, 4],
       fill: true,
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgb(255, 99, 132)',
@@ -67,11 +66,11 @@ const uxSkills = new Chart(ctx, {
   options: {
     elements: {
       line: {
-        borderWidth: 2,
+        borderWidth: 3,
       },
       point: {
         radius: 4,
-        borderWidth: 2,
+        borderWidth: 3,
       }
     },
     scales: {
@@ -82,10 +81,10 @@ const uxSkills = new Chart(ctx, {
           }
         },
         angleLines: {
-          lineWidth: 2
+          lineWidth: 3
         },
         grid: {
-          lineWidth: 2
+          lineWidth: 3
         },
         suggestedMin: 1,
         suggestedMax: 5,
