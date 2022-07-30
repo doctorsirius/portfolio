@@ -1,7 +1,7 @@
 // Detect language and redirect 
 
 var lang = window.navigator.language;
-var langShort = lang.substr(0, 2);
+var langShort = lang.substring(0, 2);
 
 switch (langShort) {
   case "en":
